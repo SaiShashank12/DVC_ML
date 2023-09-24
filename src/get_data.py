@@ -20,8 +20,10 @@ def get_data(config_path):
     df=pd.read_csv(data_path,encoding="utf-8",sep=",")
     return df
 
+## extra comment
+
 if __name__=="__main__":
     args=argparse.ArgumentParser()
-    args.add_argument("--config",default="params.yml")
+    args.add_argument("--config",default="params.yaml")
     parsed_args=args.parse_args()
     df=get_data(config_path=parsed_args.config)
